@@ -18,7 +18,7 @@
  #import <Foundation/Foundation.h>
  #import <Cordova/CDVPlugin.h>
 
- @interface TFDetect : CDVPlugin {}
+ @interface XCDetect : CDVPlugin {}
 
  - (void)detect:(CDVInvokedUrlCommand*)command;
 
