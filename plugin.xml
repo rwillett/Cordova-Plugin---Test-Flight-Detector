@@ -18,7 +18,7 @@
 
 <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
     id="london.jambuster.cordova.testflightdetector"
-    version="0.1.1">
+    version="0.1.2">
     <name>Xcode Detector</name>
     <description>Detects if app was installed via XCode OR (TestFlight OR Apple App Store)</description>
     <license>Apache 2.0</license>
@@ -26,20 +26,20 @@
     <repo>https://github.com/rwillett/Cordova-Plugin---Test-Flight-Detector.git</repo>
     <issue>https://github.com/rwillett/Cordova-Plugin---Test-Flight-Detector.git/issues</issue>
 
-    <js-module src="www/TFDetect.js" name="TFDetect">
-        <clobbers target="TFDetect" />
+    <js-module src="www/XCDetect.js" name="XCDetect">
+        <clobbers target="XCDetect" />
     </js-module>
 
     <!-- ios -->
     <platform name="ios">
         <config-file target="config.xml" parent="/*">
-            <feature name="TFDetect">
-                <param name="ios-package" value="TFDetect"/>
+            <feature name="XCDetect">
+                <param name="ios-package" value="XCDetect"/>
             </feature>
         </config-file>
 
-        <header-file src="src/ios/TFDetect.h" />
-        <source-file src="src/ios/TFDetect.m" />
+        <header-file src="src/ios/XCDetect.h" />
+        <source-file src="src/ios/XCDetect.m" />
     </platform>
 
 </plugin>
