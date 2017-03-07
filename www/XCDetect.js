@@ -25,7 +25,7 @@ var channel = require('cordova/channel'),
     cordova = require('cordova');
 
 channel.createSticky('onCordovaXCDetectReady');
-// Tell cordova channel to wait on the CordovaTFDetectReady event
+// Tell cordova channel to wait on the CordovaXCDetectReady event
 channel.waitForInitialization('onCordovaXCDetectReady');
 
 /**
