@@ -1,5 +1,5 @@
 {
-    "version": "0.1.2-dev",
+    "version": "0.1.1",
     "name": "london.jambuster.cordova.testflightdetector",
     "cordova_name": "XCode Detector",
     "description": "Detects if app was installed via Xcode or not",
