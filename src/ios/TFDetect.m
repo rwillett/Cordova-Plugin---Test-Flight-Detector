@@ -20,7 +20,7 @@
 #import "TFDetect.h"
 #import <TargetConditionals.h>
 
-@implementation TFDetect
+@implementation XCDetect
 
 /* #if TARGET_IPHONE_SIMULATOR
   BOOL const isOnSim = YES;
