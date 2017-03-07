@@ -17,10 +17,10 @@
 -->
 
 <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
-    id="london.jambuster.cordova.testflightdetector"
+    id="london.jambuster.cordova.xcodedetector"
     version="0.1.2">
     <name>Xcode Detector</name>
-    <description>Detects if app was installed via XCode OR (TestFlight OR Apple App Store)</description>
+    <description>Detects if app was installed via XCode.</description>
     <license>Apache 2.0</license>
     <keywords>cordova,testflight</keywords>
     <repo>https://github.com/rwillett/Cordova-Plugin---Test-Flight-Detector.git</repo>
