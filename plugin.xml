@@ -23,8 +23,8 @@
     <description>Detects if app was installed via XCode.</description>
     <license>Apache 2.0</license>
     <keywords>cordova,testflight</keywords>
-    <repo>https://github.com/rwillett/Cordova-Plugin---Test-Flight-Detector.git</repo>
-    <issue>https://github.com/rwillett/Cordova-Plugin---Test-Flight-Detector.git/issues</issue>
+    <repo>https://github.com/rwillett/Cordova-Plugin---XCode-Detector.git</repo>
+    <issue>https://github.com/rwillett/Cordova-Plugin---XCode-Detector/issues</issue>
 
     <js-module src="www/XCDetect.js" name="XCDetect">
         <clobbers target="XCDetect" />
