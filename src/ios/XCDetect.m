@@ -17,7 +17,7 @@
  under the License.
  */
 
-#import "TFDetect.h"
+#import "XCDetect.h"
 #import <TargetConditionals.h>
 
 @implementation XCDetect
