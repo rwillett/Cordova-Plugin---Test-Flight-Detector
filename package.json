@@ -4,8 +4,8 @@
     "cordova_name": "XCode Detector",
     "description": "Detects if app was installed via Xcode or not",
     "license": "Apache 2.0",
-    "repo": " https://github.com/rwillett/Cordova-Plugin---Test-Flight-Detector.git",
-    "issue": " https://github.com/rwillett/Cordova-Plugin---Test-Flight-Detector/issues",
+    "repo": "https://github.com/rwillett/Cordova-Plugin---XCode-Detector.git",
+    "issue": "https://github.com/rwillett/Cordova-Plugin---XCode-Detector.git/issues",
     "keywords": [
         "cordova",
         "testflight"
