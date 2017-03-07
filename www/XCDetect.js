@@ -46,7 +46,7 @@ function XCDetect() {
             me.available = true;
             me.isRunningXcode = info;
 
-            channel.onCordovaTFDetectReady.fire();
+            channel.onCordovaXCDetectReady.fire();
         },function(e) {
             me.available = false;
             utils.alert("[ERROR] Error initializing Cordova: " + e);
