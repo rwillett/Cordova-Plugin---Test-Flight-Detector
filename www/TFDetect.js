@@ -24,18 +24,18 @@ var channel = require('cordova/channel'),
     exec = require('cordova/exec'),
     cordova = require('cordova');
 
-channel.createSticky('onCordovaTFDetectReady');
+channel.createSticky('onCordovaXCDetectReady');
 // Tell cordova channel to wait on the CordovaTFDetectReady event
-channel.waitForInitialization('onCordovaTFDetectReady');
+channel.waitForInitialization('onCordovaXCDetectReady');
 
 /**
- * This calls across the bridge to tell if the app is running on testflight or the simulator then caches the result
+ * This calls across the bridge to tell if the app is running on Xcode or not then caches the result
  * It is tied to the deviceReady event (deviceReady will wait on this) so this will be available immediatly.
  * @constructor
  */
-function TFDetect() {
+function XCDetect() {
     this.available = false;
-    this.isRunningTestFlightBeta = false;
+    this.isRunningXcode = false;
 
     var me = this;
 
@@ -44,8 +44,7 @@ function TFDetect() {
             //ignoring info.cordova returning from native, we should use value from cordova.version defined in cordova.js
 
             me.available = true;
-            me.isTFXC = info;
-            me.isAppStore = !info;
+            me.isRunningXcode = info;
 
             channel.onCordovaTFDetectReady.fire();
         },function(e) {
@@ -61,8 +60,8 @@ function TFDetect() {
  * @param {Function} successCallback The function to call when the heading data is available
  * @param {Function} errorCallback The function to call when there is an error getting the heading data. (OPTIONAL)
  */
- TFDetect.prototype.detect = function(successCallback, errorCallback) {
-    exec(successCallback, errorCallback, "TFDetect", "detect", []);
+ XCDetect.prototype.detect = function(successCallback, errorCallback) {
+    exec(successCallback, errorCallback, "XCDetect", "detect", []);
 };
 
-module.exports = new TFDetect();
+module.exports = new XCDetect();
