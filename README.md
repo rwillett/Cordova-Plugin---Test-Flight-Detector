@@ -41,7 +41,9 @@ Although the object is in the global scope, it is not available until after the 
 
 ### XCDetect.isRunningXcode
 
-Returns **<u>true</u>** if the app was installed from XCode to an attached USB device or iOS Simulator.  Returns **<u>false</u>** if the app was installed via the official Apple App Store or TestFlight.
+Returns **<u>true</u>** if the app was installed from XCode to an attached USB device or iOS Simulator.  
+
+Returns **<u>false</u>** if the app was installed via the official Apple App Store or TestFlight.
 
 #### Supported Platforms
 
