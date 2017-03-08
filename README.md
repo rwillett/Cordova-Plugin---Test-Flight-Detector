@@ -32,7 +32,7 @@ Although the object is in the global scope, it is not available until after the 
 
     document.addEventListener("deviceready", onDeviceReady, false);
     function onDeviceReady() {
-        console.log(TFDetect.isRunningTestFlightBeta);
+        console.log(XCDetect.isRunningXcode);
     }
 
 ### Installation
