@@ -17,16 +17,16 @@
     under the License.
 -->
 
-Cordova TestFlight Detector Plugin
+Cordova Xcode Detector Plugin
 ===========================
 
 ## Plugin's Purpose
 
-The purpose of the plugin is to create a method for [Cordova](https://cordova.apache.org/) based iOS applications to determine at runtime whether an application was installed via the Apple App Store or as a beta app via [TestFlight](https://developer.apple.com/testflight/) or launched from XCode to an attached USB device or iOS Simulator.  This allows a developer to use a single build and exercise separate code for testing versus production. 
+The purpose of the plugin is to create a method for [Cordova](https://cordova.apache.org/) based iOS applications to determine at runtime whether an application was installed via installed from XCode to an attached USB device or iOS Simulator.  This allows a developer to use a single build and exercise separate code for testing versus production. 
 
 ## com.gosyntactix.cordova.testflightdetector
 
-This plugin defines a global `TFDetect` object, which on app launch queries whether an app was installed via TestFlight or launched from XCode.  The launch from XCode works for both the Simulator and an attached USB device.
+This plugin defines a global `XCDetect` object, which on app launch queries whether an app was installed via Xcodee.  The launch from XCode works for both the Simulator and an attached USB device.
 
 Although the object is in the global scope, it is not available until after the `deviceready` event.
 
@@ -37,16 +37,11 @@ Although the object is in the global scope, it is not available until after the 
 
 ### Installation
 
-    cordova plugin add com.gosyntactix.cordova.testflightdetector
+    cordova plugin add https://github.com/rwillett/Cordova-Plugin---XCode-Detector.git
 
-### Properties
+### XCDetect.isRunningXcode
 
-- TFDetect.isTFXC
-- TFDetect.isAppStore
-
-### TFDetect.isRunningTestFlightBeta
-
-Returns **<u>true</u>** if the app was installed via TestFlight or launched from XCode to an attached USB device or iOS Simulator.  Returns **<u>false</u>** if the app was installed via the official Apple App Store.
+Returns **<u>true</u>** if the app was installed from XCode to an attached USB device or iOS Simulator.  Returns **<u>false</u>** if the app was installed via the official Apple App Store or TestFlight.
 
 #### Supported Platforms
 
@@ -54,20 +49,9 @@ Returns **<u>true</u>** if the app was installed via TestFlight or launched from
 
 #### Quick Example
    
-    if (TFDetect.isTFXC) {
-    	//DEBUG CODE HERE    } else {
-    	//PRODUCTION CODE HERE    }
+    if (XCDetect.isRunningXcode) {
+    	//XCODE CODE HERE
+    } else {
+    	//PRODUCTION CODE HERE
+    }
 
-### TFDetect.isAppStore
-
-Returns **<u>true</u>** if the app was installed via the Apple App Store.  Returns **<u>false</u>** if the app was installed via TestFlight or launched from XCode to an attached USB device or iOS Simulator. 
-
-#### Supported Platforms
-
-- iOS
-
-#### Quick Example
-   
-    if (TFDetect.isAppStore) {
-    	//PRODUCTION CODE HERE    } else {
-    	//DEBUG CODE HERE    }
