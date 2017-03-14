@@ -49,7 +49,8 @@ function XCDetect() {
             channel.onCordovaXCDetectReady.fire();
         },function(e) {
             me.available = false;
-            utils.alert("[ERROR] Error initializing Cordova: " + e);
+            channel.onCordovaXCDetectReady.fire();
+            // utils.alert("[ERROR] Error initialising DEBUG detector PLUGIN: " + e);
         });
     });
 }
